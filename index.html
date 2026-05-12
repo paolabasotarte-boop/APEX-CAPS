@@ -96,10 +96,18 @@
     <main class="main-content">
         <!-- PÁGINA INICIO -->
         <section id="page-inicio" class="page active">
-            <!-- CARRUSEL -->
+            <!-- CARRUSEL CON OVERLAY -->
             <div class="carousel">
                 <div class="carousel-container">
                     <img id="carousel-img" src="images/carousel/carousel1.jpg" alt="Slide">
+                </div>
+                <div class="carousel-overlay">
+                    <div class="carousel-content">
+                        <h2 class="carousel-title">APEX CAPS</h2>
+                        <p class="carousel-subtitle">Tu estilo, nuestra pasión</p>
+                        <p class="carousel-description">Descubre nuestra colección premium de gorras de las mejores marcas del mundo</p>
+                        <button class="btn-primary carousel-btn-action" onclick="goToPage('catalogo')">Explorar Catálogo</button>
+                    </div>
                 </div>
                 <button id="carousel-prev" class="carousel-btn carousel-prev">‹</button>
                 <button id="carousel-next" class="carousel-btn carousel-next">›</button>
@@ -110,6 +118,31 @@
             <section class="section">
                 <h2 class="section-title">Lo Más Vendido</h2>
                 <div id="top-gorras" class="products-grid"></div>
+            </section>
+
+            <!-- UBICACIÓN -->
+            <section class="section">
+                <h2 class="section-title">Encuéntranos</h2>
+                <div class="location-container">
+                    <div class="location-map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.5242156923767!2d-79.5226!3d8.9824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8faca6d4d4d4d4d5%3A0x1234567890abcdef!2sApex%20Caps%20Panama!5e0!3m2!1ses!2spa!4v1234567890" width="100%" height="400" style="border:0; border-radius: 0.8rem;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="location-info">
+                        <div class="info-card">
+                            <h3>📍 Ubicación</h3>
+                            <p>Panamá, Panamá</p>
+                            <a href="https://maps.app.goo.gl/d5CfeNmzX3Pnhzkx7" target="_blank" class="btn-primary">Ver en Google Maps</a>
+                        </div>
+                        <div class="info-card">
+                            <h3>🕐 Horario de Atención</h3>
+                            <ul class="schedule">
+                                <li><strong>Lunes - Viernes:</strong> 9:00 AM - 6:00 PM</li>
+                                <li><strong>Sábados:</strong> 10:00 AM - 5:00 PM</li>
+                                <li><strong>Domingos:</strong> 11:00 AM - 4:00 PM</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </section>
         </section>
 
@@ -138,16 +171,139 @@
         <!-- PÁGINA SOBRE -->
         <section id="page-sobre" class="page">
             <h2 class="section-title">Sobre Nosotros</h2>
-            <div class="sobre-content">
-                <p>Información sobre APEX CAPS próximamente...</p>
+            <div class="about-container">
+                <div class="about-hero">
+                    <p class="about-intro">Somos APEX CAPS, una tienda digital de gorras nacida de la pasión por el estilo y la calidad. Comenzamos como un proyecto académico y hoy somos tu mejor opción en accesorios premium.</p>
+                </div>
+
+                <!-- SECCIONES EXPANDIBLES -->
+                <div class="accordion">
+                    <!-- MISIÓN -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>MISIÓN</span>
+                            <span class="accordion-icon">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Ofrecer a nuestros clientes gorras de calidad superior de las mejores marcas internacionales, a precios accesibles, con un servicio personalizado y confiable. Queremos que cada gorra que adquieras sea la expresión perfecta de tu estilo personal.</p>
+                        </div>
+                    </div>
+
+                    <!-- VISIÓN -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>VISIÓN</span>
+                            <span class="accordion-icon">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Convertirnos en la tienda online de referencia en Panamá para accesorios de moda, siendo reconocidos por nuestra calidad, variedad y atención al cliente. Aspiramos a ser el lugar donde tu estilo encuentra su mejor expresión.</p>
+                        </div>
+                    </div>
+
+                    <!-- OBJETIVO GENERAL -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>OBJETIVO GENERAL</span>
+                            <span class="accordion-icon">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Proporcionar una experiencia de compra excepcional, ofreciendo gorras de las mejores marcas del mundo (New Era, Carhartt, Supreme y más) a través de una plataforma digital intuitiva, segura y con atención personalizada que supere las expectativas de nuestros clientes.</p>
+                        </div>
+                    </div>
+
+                    <!-- VALORES -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>VALORES</span>
+                            <span class="accordion-icon">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <ul class="values-list">
+                                <li><strong>Calidad:</strong> Solo ofrecemos productos auténticos de marcas reconocidas</li>
+                                <li><strong>Confianza:</strong> Transparencia total en precios, descripción de productos y políticas</li>
+                                <li><strong>Accesibilidad:</strong> Precios competitivos sin comprometer la calidad</li>
+                                <li><strong>Innovación:</strong> Estar siempre actualizados con las tendencias más recientes</li>
+                                <li><strong>Servicio:</strong> Atención personalizada que resuelve tus dudas y necesidades</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- ¿POR QUÉ ELEGIRNOS? -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>¿POR QUÉ ELEGIRNOS?</span>
+                            <span class="accordion-icon">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <ul class="why-list">
+                                <li>✨ <strong>Variedad Premium:</strong> Gorras de marcas internacionales reconocidas</li>
+                                <li>💰 <strong>Precios Competitivos:</strong> La mejor relación calidad-precio del mercado</li>
+                                <li>🚀 <strong>Entrega Rápida:</strong> Procesamos tu compra al instante</li>
+                                <li>💬 <strong>Atención Personalizada:</strong> Estamos aquí para ayudarte vía WhatsApp</li>
+                                <li>🔒 <strong>Compra Segura:</strong> Tu información está protegida</li>
+                                <li>👥 <strong>Comunidad:</strong> Somos jóvenes emprendedores como tú</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- POLÍTICA DE PRIVACIDAD -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>POLÍTICA DE PRIVACIDAD</span>
+                            <span class="accordion-icon">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p><strong>Protección de tus Datos</strong></p>
+                            <p>En APEX CAPS respetamos tu privacidad. Los datos personales que compartes con nosotros (nombre, email, teléfono, dirección) son utilizados únicamente para procesar tu compra y comunicarnos contigo sobre tu orden.</p>
+                            
+                            <p><strong>Seguridad</strong></p>
+                            <p>Utilizamos estándares de seguridad cibernética para proteger tu información contra acceso no autorizado. Nunca compartimos tus datos con terceros sin tu consentimiento.</p>
+                            
+                            <p><strong>Cookies</strong></p>
+                            <p>Nuestra plataforma utiliza cookies para mejorar tu experiencia. Puedes desactivarlas en tu navegador si lo prefieres.</p>
+                            
+                            <p><strong>Contacto</strong></p>
+                            <p>Si tienes preguntas sobre tu privacidad, contáctanos vía WhatsApp: 6644-9002</p>
+                        </div>
+                    </div>
+
+                    <!-- TÉRMINOS Y CONDICIONES -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <span>TÉRMINOS Y CONDICIONES</span>
+                            <span class="accordion-icon">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p><strong>Aceptación de Términos</strong></p>
+                            <p>Al usar APEX CAPS aceptas estos términos y condiciones.</p>
+                            
+                            <p><strong>Productos y Precios</strong></p>
+                            <p>Todos nuestros productos son originales. Los precios están sujetos a cambios sin previo aviso. Confirmamos el precio al momento de tu compra.</p>
+                            
+                            <p><strong>Proceso de Compra</strong></p>
+                            <p>Tu compra se considera confirmada cuando recibes nuestra notificación de confirmación vía WhatsApp o email.</p>
+                            
+                            <p><strong>Devoluciones y Cambios</strong></p>
+                            <p>Aceptamos devoluciones dentro de 7 días de recibir tu compra si el producto está en condiciones originales. Los cambios se realizan sin costo adicional.</p>
+                            
+                            <p><strong>Limitación de Responsabilidad</strong></p>
+                            <p>APEX CAPS no se responsabiliza por daños causados durante el envío si el cliente rechaza la compra.</p>
+                            
+                            <p><strong>Cambios en los Términos</strong></p>
+                            <p>Nos reservamos el derecho de actualizar estos términos. Los cambios serán notificados en esta página.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- FOOTER -->
         <footer class="footer">
             <div class="footer-content">
-                <p>📞 <a href="https://wa.me/50764982946" target="_blank">Contacto WhatsApp: 6498-2946</a></p>
-                <p>© 2024 APEX CAPS. Todos los derechos reservados.</p>
+                <p>📞 <a href="https://wa.me/50766449002" target="_blank" class="whatsapp-link">
+                    <span class="whatsapp-icon">📱</span> Contacto WhatsApp: 6644-9002
+                </a></p>
+                <p>© 2026 APEX CAPS. Todos los derechos reservados.</p>
             </div>
         </footer>
     </main>

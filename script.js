@@ -140,6 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initCarousel();
     renderTopGorras();
     setupEventListeners();
+    setupAccordion();
     updateCartUI();
     createCarouselIndicators();
     
@@ -208,6 +209,31 @@ function setupEventListeners() {
             carouselIndex = parseInt(e.target.dataset.index);
             updateCarousel();
         }
+    });
+}
+
+// ==========================================
+// ACCORDION (SECCIONES EXPANDIBLES)
+// ==========================================
+
+function setupAccordion() {
+    const accordionHeaders = document.querySelectorAll('.accordion-header');
+    
+    accordionHeaders.forEach(header => {
+        header.addEventListener('click', () => {
+            const accordionItem = header.parentElement;
+            const isActive = accordionItem.classList.contains('active');
+            
+            // Cerrar todos los acordeones
+            document.querySelectorAll('.accordion-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            // Abrir el seleccionado si no estaba activo
+            if (!isActive) {
+                accordionItem.classList.add('active');
+            }
+        });
     });
 }
 
