@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APEX CAPS - Tienda de Gorras</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <h1 class="logo">APEX CAPS</h1>
+            <div class="navbar-right">
+                <button id="cart-btn" class="cart-button">
+                    <span class="cart-icon">🛒</span>
+                    <span id="cart-count" class="cart-count">0</span>
+                </button>
+                <button id="menu-toggle" class="menu-toggle">☰</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- NOTA: ESTRUCTURA DE CARPETAS NECESARIA
+    apex-caps/
+    ├── index.html
+    ├── script.js
+    ├── style.css
+    └── images/
+        ├── carousel/
+        │   ├── carousel1.jpg
+        │   ├── carousel2.jpg
+        │   └── carousel3.jpg
+        ├── gorras/
+        │   ├── gorra1.jpg (New Era Classic Black)
+        │   ├── gorra2.jpg (New Era Yankees Heritage)
+        │   ├── gorra3.jpg (Carhartt Workwear Cap)
+        │   ├── gorra4.jpg (Supreme Drip Cap)
+        │   ├── gorra5.jpg (Stüssy Essential Cap)
+        │   ├── gorra6.jpg (New Era Women Rosa)
+        │   ├── gorra7.jpg (Carhartt Women Beige)
+        │   ├── gorra8.jpg (Supreme Pastel Cap)
+        │   ├── gorra9.jpg (New Era Dad Hat White)
+        │   ├── gorra10.jpg (Vintage Trucker Cap)
+        │   ├── gorra11.jpg (Minimalist Gray Cap)
+        │   └── gorra12.jpg (Carhartt Premium Black)
+    -->
+
+    <!-- SIDEBAR MENU -->
+    <aside id="sidebar" class="sidebar">
+        <nav class="sidebar-nav">
+            <button class="nav-btn" data-page="inicio">
+                <span class="nav-text">Inicio</span>
+            </button>
+
+            <div class="nav-group">
+                <button class="nav-btn" data-page="catalogo">
+                    <span class="nav-text">Catálogo</span>
+                </button>
+                <div id="catalog-submenu" class="submenu hidden">
+                    <button class="submenu-btn" data-category="caballero">Caballero</button>
+                    <button class="submenu-btn" data-category="dama">Dama</button>
+                </div>
+            </div>
+
+            <button class="nav-btn" data-page="carrito">
+                <span class="nav-text">Carrito</span>
+            </button>
+
+            <button class="nav-btn" data-page="sobre">
+                <span class="nav-text">Sobre</span>
+            </button>
+        </nav>
+    </aside>
+
+    <!-- CARRITO LATERAL -->
+    <div id="cart-panel" class="cart-panel">
+        <div class="cart-header">
+            <h3>Tu Carrito</h3>
+            <button id="close-cart" class="close-btn">✕</button>
+        </div>
+        <div id="cart-items" class="cart-items"></div>
+        <div id="cart-empty" class="cart-empty">
+            <p>Carrito vacío</p>
+        </div>
+        <div id="cart-footer" class="cart-footer hidden">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total-price">$0.00</span>
+            </div>
+            <button class="btn-primary btn-full" data-page="carrito" onclick="goToPage('carrito')">Ver Carrito</button>
+        </div>
+    </div>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main-content">
+        <!-- PÁGINA INICIO -->
+        <section id="page-inicio" class="page active">
+            <!-- CARRUSEL -->
+            <div class="carousel">
+                <div class="carousel-container">
+                    <img id="carousel-img" src="images/carousel/carousel1.jpg" alt="Slide">
+                </div>
+                <button id="carousel-prev" class="carousel-btn carousel-prev">‹</button>
+                <button id="carousel-next" class="carousel-btn carousel-next">›</button>
+                <div class="carousel-indicators" id="carousel-indicators"></div>
+            </div>
+
+            <!-- TOP VENDIDAS -->
+            <section class="section">
+                <h2 class="section-title">Lo Más Vendido</h2>
+                <div id="top-gorras" class="products-grid"></div>
+            </section>
+        </section>
+
+        <!-- PÁGINA CATÁLOGO -->
+        <section id="page-catalogo" class="page">
+            <h2 id="catalog-title" class="section-title">Catálogo</h2>
+
+            <!-- FILTROS -->
+            <div class="filters">
+                <button class="filter-btn active" data-brand="todos">Todas las marcas</button>
+                <button class="filter-btn" data-brand="New Era">New Era</button>
+                <button class="filter-btn" data-brand="Carhartt">Carhartt</button>
+                <button class="filter-btn" data-brand="Supreme">Supreme</button>
+            </div>
+
+            <!-- GRID PRODUCTOS -->
+            <div id="catalog-grid" class="products-grid"></div>
+        </section>
+
+        <!-- PÁGINA CARRITO -->
+        <section id="page-carrito" class="page">
+            <h2 class="section-title">Tu Carrito</h2>
+            <div id="cart-page-content"></div>
+        </section>
+
+        <!-- PÁGINA SOBRE -->
+        <section id="page-sobre" class="page">
+            <h2 class="section-title">Sobre Nosotros</h2>
+            <div class="sobre-content">
+                <p>Información sobre APEX CAPS próximamente...</p>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p>📞 <a href="https://wa.me/50764982946" target="_blank">Contacto WhatsApp: 6498-2946</a></p>
+                <p>© 2024 APEX CAPS. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
